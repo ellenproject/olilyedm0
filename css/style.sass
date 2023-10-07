@@ -1,0 +1,513 @@
+*
+    margin: 0
+    padding: 0
+    max-width: 100%
+    .fz_xl
+        font-size: 86px
+        line-height: 1.25
+        letter-spacing: 5px
+        text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5)
+        font-weight: 600
+        @media ( max-width: 1440px )
+            font-size: 70px
+        @media ( max-width: 1200px )
+            font-size: 50px
+        @media ( max-width: 991px )
+            font-size: 44px
+        @media ( max-width: 768px )
+            font-size: 42px
+        @media ( max-width: 576px )
+            font-size: 36px
+        @media ( max-width: 480px )
+            font-size: 32px
+    .fz_l
+        font-size: 72px
+        line-height: 1.5
+        letter-spacing: 3px
+        text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5)
+        font-weight: 500
+        @media ( max-width: 1440px )
+            font-size: 70px
+        @media ( max-width: 1200px )
+            font-size: 50px
+        @media ( max-width: 991px )
+            font-size: 48px
+        @media ( max-width: 768px )
+            font-size: 36px
+        @media ( max-width: 576px )
+            font-size: 30px
+            letter-spacing: 0px
+    .fz_ls
+        font-size: 55px
+        line-height: 1.5
+        letter-spacing: 3px
+        font-weight: 500
+        @media ( max-width: 1440px )
+            font-size: 42px
+        @media ( max-width: 1200px )
+            font-size: 40px
+        @media ( max-width: 991px )
+            font-size: 36px
+        @media ( max-width: 768px )
+            font-size: 32px
+        @media ( max-width: 576px )
+            font-size: 28px
+            letter-spacing: 0px
+    .fz_m
+        font-size: 40px
+        line-height: 1.5
+        letter-spacing: 2px
+        font-weight: 500
+        @media ( max-width: 1200px )
+            font-size: 36px
+        @media ( max-width: 991px )
+            font-size: 28px
+        @media ( max-width: 768px )
+            font-size: 24px
+    .fz_s
+        font-size: 24px
+        line-height: 1.5
+        letter-spacing: 2px
+        font-weight: 500
+        @media ( max-width: 991px )
+            font-size: 20px
+        @media ( max-width: 768px )
+            font-size: 18px
+        @media ( max-width: 575px )
+            font-size: 16px
+    .fz_xs
+        font-size: 20px
+        line-height: 1.5
+        letter-spacing: 1.5px
+        font-weight: 500
+        @media ( max-width: 768px )
+            font-size: 16px
+            letter-spacing: 0
+
+    .color-w
+        color: #fff
+    .color-yl
+        color: #d1cdb9
+    .color-by
+        color: #D2B281
+    .color-p
+        color: #B4B3C9
+    .color-pd
+        color: #36394B
+    .color-gl
+        color: #B2B3B3
+
+@mixin deskBig()
+    @media ( max-width: 1440px )
+        @content
+
+@mixin desk()
+    @media ( max-width: 1200px )
+        @content
+
+@mixin deskMini()
+    @media ( max-width: 1024px )
+        @content
+
+@mixin padBig()
+    @media ( max-width: 991px )
+        @content
+
+@mixin pad()
+    @media ( max-width: 768px )
+        @content
+
+@mixin padMini()
+    @media ( max-width: 576px )
+        @content
+
+@mixin mobile()
+    @media ( max-width: 480px )
+        @content
+
+@keyframes fadeIn
+    0%
+        transform: translate(0%, 100%)
+        opacity: 0.8
+    100%
+        transform: translate(0%, 0%)
+        opacity: 1
+
+//頁首
+nav
+    .logo_bar
+        display: block
+        width: 100%
+        position: fixed
+        top: 0
+        background-color: rgb(193, 13, 36)
+        text-align: center
+        z-index: 10
+        transition: all .5s
+        // opacity: 0.8
+        height: 70px
+        a
+            display: inline-block
+            color: #fff
+            padding: 15px
+            &:nth-child(1)
+                img
+                    max-height: 40px
+                    opacity: 1
+            img
+                min-width: 30px
+                min-height: 30px
+                opacity: .8
+                animation: all 2s
+                &:hover
+                    opacity: 1
+        .icon
+            @include pad
+                display: none
+
+//BANNER影片區
+section.video
+    padding-top: 70px
+    position: relative
+.video_mp4
+    position: relative
+    overflow: hidden
+    // height: 100vh
+    padding-bottom: 50%
+    background-color: #000
+    @include pad
+        padding-bottom: 110%
+    &::after
+        position: absolute
+        content: ""
+        display: block
+        background-color: rgba(0, 0, 0, 0.5)
+        width: 100%
+        height: 100%
+        top: 0
+    video
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        object-fit: cover
+        height: 100%
+.video_title1
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 90%
+    z-index: 2
+    color: #fff
+    text-align: center
+.video_title2
+    position: absolute
+    bottom: 8%
+    left: 50%
+    transform: translateX(-50%)
+    width: 90%
+    z-index: 2
+    color: #fff
+    text-align: center
+
+.first
+    background: url(../upload/bg01.jpg) center center / cover no-repeat
+    padding: 160px 0
+    @include pad
+        padding: 50px 0
+    .subtitle, .featured
+        text-align: left
+        margin: 100px auto
+        @include pad
+            text-align: center
+            margin: 20px auto
+    .featured
+        position: relative
+        padding-left: 30px
+        border-left: 1px solid #707070
+        @include pad
+            border-left: 0px
+.second
+    background: url(../upload/bg02.jpg) center center / cover no-repeat
+    padding-bottom: 10%
+    position: relative
+    top: -3px
+    .container
+        padding-top: 11%
+//歪斜影片
+.skew
+    position: relative
+    video
+        width: 100%
+        border: 15px solid #000
+        border-radius: 40px
+        box-shadow: 0px 6px 15px rgba(15, 199, 255, 0.6)
+        background-color: #242424
+        transform: rotate(-65deg)
+        // margin-top: 30%
+        @include desk
+            border-radius: 25px
+        @include pad
+            transform: rotate(0deg)
+//半圓圖文
+.circlebox
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        background: url(../upload/c05.png)center center / contain no-repeat
+        width: 100%
+        height: 100%
+        top: 50%
+        left: -60%
+        transform: translateY(-50%)
+        @include pad
+            transform: translateY(-50%) rotate(18deg)
+.circle
+    padding: 20px 0
+    position: relative
+    z-index: 5
+    display: inline-block
+    @include pad
+        width: 90%
+    .item
+        display: flex
+        align-items: center
+        .Img
+            width: 20%
+            padding-right: 20px
+        .Txt
+            width: 60%
+            word-break: break-all
+    &:nth-child(1)
+        transform: translateX(-30px)
+        @include pad
+            transform: translateX(0px)
+    &:nth-child(2)
+        transform: translateX(30px)
+        @include pad
+            transform: translateX(30px)
+    &:nth-child(3)
+        transform: translateX(60px)
+        @include pad
+            transform: translateX(30px)
+    &:nth-child(4)
+        transform: translateX(30px)
+        @include pad
+            transform: translateX(0px)
+
+//SWIPER影片區
+//SWIPER 3D CAROUSEL
+.carousel-3D-swiper-section
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 14px
+    color: #000
+    margin: 50px auto
+    padding: 0
+    max-width: 1200px
+    overflow: hidden
+    // min-height: 500px
+
+.carousel-3D-swiper
+    overflow: hidden
+
+.carousel-3D-swiper .swiper-slide 
+    position: relative
+    cursor: pointer
+
+.carousel-3D-swiper .image-wrapper 
+    overflow: hidden
+    //@apply aspect-video
+    // max-height: 310px
+
+.carousel-3D-swiper .image-wrapper video
+    display: block
+    width: 100%
+    height: 100%
+    // max-height: 225px
+    -o-object-fit: cover
+    object-fit: cover
+    border-radius: 8px
+    -webkit-box-reflect: below 5px -webkit-linear-gradient(bottom, rgba( 255, 0, 0,	0.1 ) 0%, transparent 32px, transparent 100%)
+
+.carousel-3D-swiper-section .swiper-pagination-bullet 
+    margin: 0 4px
+    width: 16px
+    height: 16px
+    z-index: 50
+
+.carousel-3D-swiper-section .swiper-pagination-bullet-active 
+    opacity: 1
+    background: orange
+
+.swiper-slide-active
+    position: relative
+    overflow: hidden
+    // padding-bottom: 27%
+    background-color: #000
+    width: 100%
+    border: 15px solid #000
+    border-radius: 40px
+    @include pad
+        border: 5px solid #000
+        border-radius: 10px
+
+.swiper-button-prev
+    background-image: url(../imgs/btn-prev.svg) !important
+.swiper-button-next
+    background-image: url(../imgs/btn-next.svg) !important
+
+
+.process
+    h2
+        margin: 20px auto
+.process_outer
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    margin: 0 auto
+    justify-content: center
+.process_box
+    margin: 0 auto
+    width: 190px
+    height: 190px
+    background-color: #fff
+    padding: 25px
+    border-radius: 15px
+    position: relative
+    @include desk
+        margin: 50px 0 0 0
+    @include padMini
+        width: 45%
+    // &::after
+    //     content: ""
+    //     position: absolute
+    //     background: url(../upload/parrow.png)center center / contain no-repeat
+    //     top: 50%
+    //     right: -30%
+    //     transform: translateY(-50%)
+    //     width: 20%
+    //     height: 100%
+    // &:nth-child(5)
+    //     &::after
+    //         display: none
+    h4
+        margin: 32px 0 0
+        position: relative
+        text-align: center
+.arrow
+    width: 25px
+    justify-content: center
+    align-items: flex-end
+    display: flex
+    bottom: -30px
+    position: relative
+
+body
+    -webkit-overflow-scrolling: touch
+    font-family: 'Noto Sans TC', sans-serif
+    overflow-x: hidden
+    main
+        position: relative
+
+footer
+    text-align: center
+    background: url(../upload/bg03.jpg) center center / cover no-repeat
+    padding-bottom: 15%
+    position: relative
+    top: -3px
+    @include deskBig
+        padding-bottom: 11%
+    @include desk
+        padding-bottom: 5%
+    .container
+        padding: 5% 0 0
+.ftlogo
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 auto
+    img
+        position: relative
+        border-right: 1px solid #707070
+        padding-right: 25px
+        @include pad
+            padding-right: 8px
+    h4
+        font-size: 32px
+        @include desk
+            font-size: 28px
+        @include deskBig
+            font-size: 20px
+        @include mobile
+            font-size: 16px
+.ftslogan
+    position: relative
+    padding: 20px 0
+    width: 50%
+    margin: 0 auto
+    text-align: center
+    border-top: 1px solid #707070
+    border-bottom: 1px solid #707070
+    @include padMini
+        width: 70%
+    @include mobile
+        width: 80%
+
+.md_title
+    padding: 100px 0 50px
+    @include desk
+        padding: 50px 0 20px
+.horizontal-list
+    justify-content: center
+    display: flex
+    padding-bottom: 50px
+    @include desk
+        padding: 20px 0
+    li
+        img
+            width: 60%
+            @include desk
+                width: 50%
+            @include pad
+                width: 60%
+
+.modal
+    // animation: fadeIn .5s ease-in-out
+    .modal-dialog
+        max-width: 100%
+        margin: 0
+        .modal-content
+            position: relative
+            .modal-header
+                background-color: #000
+                border: 0px
+                position: relative
+                .btn-close
+                    background-color: #fff
+            .modal-body
+                width: 100%
+                height: 95vh
+                display: block
+                justify-content: center
+                padding: 0
+
+.gotop
+    a
+        text-decoration: none
+        display: block
+        width: 50px
+        height: 50px
+        line-height: 50px
+        background-color: rgb(195, 13, 36)
+        opacity: 0.8
+        position: fixed
+        bottom: 30px
+        right: 10px
+        border-radius: 10px
+        color: #fff
+        text-align: center
