@@ -142,7 +142,7 @@ nav
         top: 0
         background-color: rgb(193, 13, 36)
         text-align: center
-        z-index: 10
+        z-index: 20
         transition: all .5s
         // opacity: 0.8
         height: 70px
@@ -311,9 +311,11 @@ section.video
     max-width: 1200px
     overflow: hidden
     // min-height: 500px
+    position: relative
 
 .carousel-3D-swiper
     overflow: hidden
+    margin: 0 40px //箭頭在影片外
 
 .carousel-3D-swiper .swiper-slide 
     position: relative
@@ -331,7 +333,6 @@ section.video
     // max-height: 225px
     -o-object-fit: cover
     object-fit: cover
-    border-radius: 8px
     -webkit-box-reflect: below 5px -webkit-linear-gradient(bottom, rgba( 255, 0, 0,	0.1 ) 0%, transparent 32px, transparent 100%)
 
 .carousel-3D-swiper-section .swiper-pagination-bullet 
@@ -351,15 +352,15 @@ section.video
     background-color: #000
     width: 100%
     border: 15px solid #000
-    border-radius: 40px
+    border-radius: 30px
     @include pad
         border: 5px solid #000
         border-radius: 10px
 
-.swiper-button-prev
-    background-image: url(../imgs/btn-prev.svg) !important
-.swiper-button-next
-    background-image: url(../imgs/btn-next.svg) !important
+// .swiper-button-prev
+//     background-image: url(../imgs/btn-prev.svg) !important
+// .swiper-button-next
+//     background-image: url(../imgs/btn-next.svg) !important
 
 
 .process
