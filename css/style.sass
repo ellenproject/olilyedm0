@@ -240,17 +240,18 @@ section.video
 .skew
     position: relative
     z-index: 5
+    border: 15px solid #000
+    border-radius: 15px
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3)
+    background-color: #242424
+    transform: rotate(-65deg)
+    overflow: hidden
+    // margin-top: 30%
     video
         width: 100%
-        border: 15px solid #000
-        border-radius: 15px
-        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3)
-        background-color: #242424
-        transform: rotate(-65deg)
-        // margin-top: 30%
-        @include desk
-            border-radius: 10px
-            transform: rotate(0deg)
+    @include desk
+        border-radius: 10px
+        transform: rotate(0deg)
 //半圓圖文
 .circlebox
     position: relative
