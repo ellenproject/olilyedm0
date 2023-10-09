@@ -331,7 +331,10 @@ section.video {
   overflow: hidden;
 }
 .skew video {
+  display: block;
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 @media (max-width: 1200px) {
   .skew {
