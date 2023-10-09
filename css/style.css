@@ -327,18 +327,14 @@ section.video {
 .skew video {
   width: 100%;
   border: 15px solid #000;
-  border-radius: 40px;
+  border-radius: 15px;
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
   background-color: #242424;
   transform: rotate(-65deg);
 }
 @media (max-width: 1200px) {
   .skew video {
-    border-radius: 25px;
-  }
-}
-@media (max-width: 768px) {
-  .skew video {
+    border-radius: 10px;
     transform: rotate(0deg);
   }
 }
@@ -403,6 +399,11 @@ section.video {
 }
 .circle:nth-child(3) {
   transform: translateX(60px);
+}
+@media (max-width: 1200px) {
+  .circle:nth-child(3) {
+    transform: translateX(50px);
+  }
 }
 @media (max-width: 768px) {
   .circle:nth-child(3) {

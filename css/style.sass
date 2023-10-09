@@ -243,14 +243,13 @@ section.video
     video
         width: 100%
         border: 15px solid #000
-        border-radius: 40px
+        border-radius: 15px
         box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3)
         background-color: #242424
         transform: rotate(-65deg)
         // margin-top: 30%
         @include desk
-            border-radius: 25px
-        @include pad
+            border-radius: 10px
             transform: rotate(0deg)
 //半圓圖文
 .circlebox
@@ -292,6 +291,8 @@ section.video
             transform: translateX(30px)
     &:nth-child(3)
         transform: translateX(60px)
+        @include desk
+            transform: translateX(50px)
         @include pad
             transform: translateX(30px)
     &:nth-child(4)
